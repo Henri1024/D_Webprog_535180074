@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript in body</title>
+
+    <style>
+      .makered {
+        color: red;
+      }
+      .hide {
+        visibility: hidden;
+      }
+      .show {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" onclick="changeLine1Style()">change color</button>
+    <p id="cline1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin augue
+      lacus, ultrices eget nulla quis, faucibus faucibus nunc
+    </p>
+
+    <button type="button" onclick='changeStyle("cline2","hide")'>Hide</button>
+
+    <button type="button" onclick='changeStyle("cline2","show")'>show</button>
+
+    <p id="cline2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin augue
+      lacus, ultrices eget nulla quis, faucibus faucibus nunc
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin augue
+      lacus, ultrices eget nulla quis, faucibus faucibus nunc
+    </p>
+
+    <script>
+      function changeLine2() {}
+      function changeLine1Style() {
+        document.getElementById("cline1").className = "makered";
+      }
+      function changeStyle(id, classname) {
+        document.getElementById(id).className = classname;
+      }
+    </script>
+  </body>
+</html>

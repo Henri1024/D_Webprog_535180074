@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Invocation Pattern</title>
+
+    <script>
+      var Person = {
+        Email: "",
+        NIM: "",
+        Nama: "",
+        Hobbies: [],
+
+        AddBio: function (pEmail, pNim, pNama) {
+          this.Email = pEmail;
+          this.NIM = pNim;
+          this.Nama = pNama;
+        },
+
+        AddHobby: function (pHobby) {
+          this.Hobbies.push(pHobby);
+        },
+
+        Write: function () {
+          var str = "bio : " + this.Email + ", " + this.NIM + ", " + this.Nama;
+          var hobbs = "Hobbies : ";
+          var hobby;
+
+          for (hobby of this.Hobbies) {
+            hobbs += hobby + ", ";
+          }
+          return str + " " + hobbs;
+        },
+      };
+
+      function AddBioInfo(pEmail, pNim, pName) {
+        Person.AddBio(pEmail, pNim, pName);
+      }
+
+      function AddHobby(phobby) {
+        Person.AddHobby(phobby);
+      }
+
+      function LoadObject() {
+        document.getElementById("oResult").innerHTML = Person.Write();
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="iEmail" placeholder="Enter Your Email" />
+    <input type="text" id="iNim" placeholder="Enter Your NIM" />
+    <input type="text" id="iName" placeholder="Enter Your Name" />
+
+    <button
+      type="button"
+      onclick='AddBioInfo(
+      document.getElementById("iEmail").value,
+      document.getElementById("iNim").value,
+      document.getElementById("iName").value,      
+    )'
+    >
+      Add Bio Info</button
+    ><br /><br />
+
+    <input
+      type="text"
+      id="iHobby"
+      placeholder="Enter your hobby"
+      style="width: 500px"
+    />
+    <button
+      type="button"
+      onclick='Person.AddHobby(document.getElementById("iHobby").value)'
+    >
+      Add
+    </button>
+
+    <br /><br />
+
+    <button type="button" onclick="LoadObject()">Load</button>
+    <br /><br />
+
+    <div id="oResult"></div>
+  </body>
+</html>

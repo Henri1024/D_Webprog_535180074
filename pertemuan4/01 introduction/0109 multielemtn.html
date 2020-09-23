@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript browser's log</title>
+
+    <style>
+      .makered {
+        color: red;
+      }
+      .hide {
+        visibility: hidden;
+      }
+      .show {
+        visibility: visible;
+      }
+    </style>
+
+    <script>
+      function changeall(str) {
+        document.getElementById("cline1").innerHTML = str;
+        document.getElementById("cline2").innerHTML = str;
+        document.getElementById("cline1").className = "makered";
+        document.getElementById("cline2").className = "makered";
+      }
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick='changeall("hello, hai")'>Change All</button>
+    <p id="cline1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin augue
+      lacus, ultrices eget nulla quis, faucibus faucibus nunc
+    </p>
+    <p id="cline2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin augue
+      lacus, ultrices eget nulla quis, faucibus faucibus nunc
+    </p>
+  </body>
+</html>
