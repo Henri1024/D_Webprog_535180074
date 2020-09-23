@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript syntax</title>
+
+    <script>
+      var str =
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin augue lacus, ultrices eget nulla quis, faucibus faucibus nunc";
+      function ForLoop(iteration) {
+        document.getElementById("oResult").innerHTML = "";
+        for (i = 0; i < iteration; i++) {
+          document.getElementById("oResult").innerHTML += str + "<br/>";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="number"
+      id="iLoop"
+      placeholder="Enter your number of iteration"
+    />
+
+    <button
+      type="button"
+      onclick='ForLoop(document.getElementById("iLoop").value)'
+    >
+      Iterate
+    </button>
+
+    <br />
+
+    <p id="oResult"></p>
+  </body>
+</html>

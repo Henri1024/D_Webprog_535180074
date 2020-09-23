@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Object</title>
+
+    <script>
+      var saya;
+      function Person(pEmail, pNIM, pNama) {
+        this.Email = pEmail;
+        this.NIM = pNIM;
+        this.Nama = pNama;
+
+        this.ValidateData = function () {
+          if (this.Email != "" && this.NIM != "" && this.Nama != "") {
+            return "OK";
+          } else {
+            return "NG";
+          }
+        };
+      }
+
+      function CreateObject(pEmail, pNIM, pNama) {
+        saya = new Person(pEmail, pNIM, pNama);
+        console.log(saya);
+      }
+
+      function LoadObject() {
+        document.getElementById("iPerson").value =
+          "Email : " +
+          saya.Email +
+          " " +
+          "Nim : " +
+          saya.NIM +
+          " " +
+          "Nama : " +
+          saya.Nama +
+          " Validation : " +
+          saya.ValidateData();
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="iEmail" placeholder="enter your email address" />
+    <input type="text" id="iNIM" placeholder="enter your NIM" />
+    <input type="text" id="iName" placeholder="enter your Name" />
+
+    <br />
+    <button
+      type="button"
+      onclick='CreateObject(
+      document.getElementById("iEmail").value,
+      document.getElementById("iNIM").value,
+      document.getElementById("iName").value,
+    )'
+    >
+      Create
+    </button>
+
+    <br /><br />
+    <button type="button" onclick="LoadObject()">Load</button>
+
+    <input type="text" id="iPerson" style="width: 550px" readonly />
+  </body>
+</html>

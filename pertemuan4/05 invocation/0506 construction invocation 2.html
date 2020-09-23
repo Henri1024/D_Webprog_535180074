@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Invocation Pattern</title>
+
+    <script>
+      function base() {
+        this.value = 500;
+      }
+
+      var child = new base();
+    </script>
+  </head>
+  <body>
+    <button
+      type="button"
+      onclick='document.getElementById("oResult").innerHTML=child.value;'
+    >
+      Click me
+    </button>
+    <p id="oResult"></p>
+  </body>
+</html>

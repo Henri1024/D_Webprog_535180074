@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript datatype</title>
+
+    <script>
+      function Add(id, inp1, inp2) {
+        document.getElementById(id).value = Number(inp1) + Number(inp2);
+      }
+      function Subtract(id, inp1, inp2) {
+        document.getElementById(id).value = Number(inp1) - Number(inp2);
+      }
+      function Multiply(id, inp1, inp2) {
+        document.getElementById(id).value = Number(inp1) * Number(inp2);
+      }
+      function Divide(id, inp1, inp2) {
+        document.getElementById(id).value = Number(inp1) / Number(inp2);
+      }
+      function Modulo(id, inp1, inp2) {
+        document.getElementById(id).value = Number(inp1) % Number(inp2);
+      }
+      function Power(id, inp1, inp2) {
+        document.getElementById(id).value = Number(inp1) ** Number(inp2);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="number" id="iNumSub1" />
+    <input type="number" id="iNumSub2" />
+    <br />
+    <button
+      type="button"
+      onclick='Add("oResSub",document.getElementById("iNumSub1").value,document.getElementById("iNumSub2").value)'
+    >
+      ADD
+    </button>
+    <button
+      type="button"
+      onclick='Subtract("oResSub",document.getElementById("iNumSub1").value,document.getElementById("iNumSub2").value)'
+    >
+      Subtract
+    </button>
+    <button
+      type="button"
+      onclick='Multiply("oResSub",document.getElementById("iNumSub1").value,document.getElementById("iNumSub2").value)'
+    >
+      Multiply
+    </button>
+    <button
+      type="button"
+      onclick='Divide("oResSub",document.getElementById("iNumSub1").value,document.getElementById("iNumSub2").value)'
+    >
+      Divide
+    </button>
+    <button
+      type="button"
+      onclick='Modulo("oResSub",document.getElementById("iNumSub1").value,document.getElementById("iNumSub2").value)'
+    >
+      Modulo
+    </button>
+    <button
+      type="button"
+      onclick='Power("oResSub",document.getElementById("iNumSub1").value,document.getElementById("iNumSub2").value)'
+    >
+      Power
+    </button>
+    <br /><br />
+    <input type="number" id="oResSub" />
+  </body>
+</html>

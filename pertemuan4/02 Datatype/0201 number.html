@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript datatype</title>
+
+    <script>
+      function changeContent(id, num) {
+        var x;
+        x = 3;
+        var res = num + x;
+        document.getElementById(id).innerHTML = "3 + " + num + " = " + res;
+      }
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick='changeContent("cline",500)'>Click Me</button>
+    <h5 id="cline">test test test</h5>
+  </body>
+</html>

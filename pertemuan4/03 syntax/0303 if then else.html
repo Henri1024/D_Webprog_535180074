@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript syntax</title>
+
+    <script>
+      var Hobbies = [];
+
+      function AddHobby(pHobby) {
+        if (Hobbies.length == 5) {
+          alert("you have reach max possible hobbies!");
+        } else if (Hobbies.length < 5 && pHobby.length < 3) {
+          alert("please type correct hobby!");
+        } else {
+          Hobbies.push(pHobby);
+          document.getElementById("iHobby").value = "";
+          document.getElementById("iHobby").focus();
+          console.log(Hobbies.length);
+        }
+      }
+      function InLoop() {
+        var hobby;
+        document.getElementById("oResult").innerHTML = "";
+        for (hobby of Hobbies) {
+          document.getElementById("oResult").innerHTML += hobby + "<br/>";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="iHobby"
+      placeholder="Enter your hobby (max 5)"
+      style="width: 500px"
+    />
+
+    <button
+      type="button"
+      onclick='AddHobby(document.getElementById("iHobby").value)'
+    >
+      Add
+    </button>
+
+    <button type="button" onclick="InLoop()">ShowAll</button>
+    <br />
+
+    <p id="oResult"></p>
+  </body>
+</html>

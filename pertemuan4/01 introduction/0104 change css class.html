@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript change css class</title>
+
+    <style>
+      .makered {
+        color: red;
+      }
+      .hide {
+        visibility: hidden;
+      }
+      .show {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <button
+      type="button"
+      onclick='document.getElementById("cline1").className="makered"'
+    >
+      change color
+    </button>
+    <p id="cline1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin augue
+      lacus, ultrices eget nulla quis, faucibus faucibus nunc
+    </p>
+
+    <button
+      type="button"
+      onclick='document.getElementById("cline2").className="hide"'
+    >
+      Hide
+    </button>
+
+    <button
+      type="button"
+      onclick='document.getElementById("cline2").className="show"'
+    >
+      show
+    </button>
+
+    <p id="cline2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin augue
+      lacus, ultrices eget nulla quis, faucibus faucibus nunc
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin augue
+      lacus, ultrices eget nulla quis, faucibus faucibus nunc
+    </p>
+  </body>
+</html>

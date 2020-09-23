@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Object</title>
+
+    <script>
+      var Person = {
+        Email: "email@example.com",
+        NIM: "535180000",
+        Nama: "namanya",
+        Age: 18,
+      };
+
+      function LoadObject() {
+        document.getElementById("iPerson").value =
+          "Email : " +
+          Person.Email +
+          " " +
+          "Nim : " +
+          Person.NIM +
+          " " +
+          "Nama : " +
+          Person.Nama +
+          " ";
+      }
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick="LoadObject()">Load</button>
+
+    <input type="text" id="iPerson" style="width: 550px" readonly />
+  </body>
+</html>
