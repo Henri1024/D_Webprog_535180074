@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript akses DOM</title>
+  </head>
+  <body>
+    <div class="app">
+      <nav>
+        <ul id="menu">
+          <li class="item">HTML</li>
+          <li class="item">CSS</li>
+          <li class="item highlight">JS</li>
+          <li class="item">TS</li>
+        </ul>
+      </nav>
+      <h1>getElementsByClassName Demo</h1>
+      <section>
+        <h2 class="heading-secondary">Example1</h2>
+      </section>
+      <section>
+        <h2 class="heading-secondary">Example2</h2>
+      </section>
+    </div>
+    <script>
+      let menu = document.getElementById("menu");
+      let items = menu.getElementsByClassName("item");
+
+      let data1 = [].map.call(items, (item) => item.textContent);
+      console.log(data1);
+
+      let elements = document.getElementsByClassName("heading-secondary");
+      let data2 = [].map.call(elements, (elem) => elem.textContent);
+      console.log(data2);
+    </script>
+  </body>
+</html>

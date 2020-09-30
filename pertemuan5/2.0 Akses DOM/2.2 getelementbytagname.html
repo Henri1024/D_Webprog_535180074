@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript akses DOM</title>
+  </head>
+  <body>
+    <p>Pleaser rate the service :</p>
+    <p>
+      <input type="radio" name="rate" value="very poor" />Very Poor
+      <input type="radio" name="rate" value="poor" />Poor
+      <input type="radio" name="rate" value="ok" />Ok
+      <input type="radio" name="rate" value="good" />Good
+      <input type="radio" name="rate" value="very good" />Very Good
+    </p>
+    <p><button id="btnRate">Submit</button></p>
+
+    <script>
+      var btn = document.getElementById("btnRate");
+
+      btn.addEventListener("click", () => {
+        var rates = document.getElementsByName("rate");
+        rates.forEach((rate) => {
+          if (rate.checked) {
+            alert(`you rated : ${rate.value}`);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
